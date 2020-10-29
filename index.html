@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="navbar__logo">
+        <img src="assets/img/logo_alpha.png" alt="logo" />
+      </a>
+      <button
+        class="navbar__toggler"
+        id="searchIconMobile"
+        onclick="toggleSearchMenu()"
+      >
+        <img src="assets/img/icons8-search-24.png" />
+      </button>
+      <div class="navbar__collapse collapse" id="navbarSearchNav">
+        <div class="search__container">
+          <div class="search__form">
+            <input type="text" id="inputSearch" />
+            <button onclick="searchMovie()">Buscar</button>
+          </div>
+          <ul
+            class="movies__list__container"
+            id="moviesSearchListContainer"
+          ></ul>
+        </div>
+      </div>
+    </nav>
+    <script src="assets/key.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
