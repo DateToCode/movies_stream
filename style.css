@@ -68,6 +68,7 @@ body {
   padding: 12px 8px;
   position: sticky;
   top: 0;
+  background-color: #1a1a1a;
 }
 
 .search__form input {
@@ -89,4 +90,42 @@ body {
   text-transform: uppercase;
   outline: none;
   border-radius: 4px;
+}
+
+/* LIST MOVIE NAVBAR SECTION */
+
+.movies__list__container {
+  list-style: none;
+  padding: 0 24px;
+}
+
+.movies__list__container li {
+  color: #fafafa;
+  background: #474747;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.movie__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.movie__image__container img {
+  width: 100%;
+}
+
+.movie__info__container {
+  margin-top: 24px;
+}
+
+.movie__info__container > * {
+  margin-top: 12px;
+}
+
+.movie__info__container > p {
+  font-size: 14px;
 }
