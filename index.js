@@ -19,13 +19,11 @@ function printMovies(parentHTML, movies) {
   parentHTML.innerHTML = "";
 
   movies.forEach((movie) => {
-    parentHTML.appendChild(printMovie(movie));
-    // Añadir al padre
-    // listMoviesContainer.appendChild(liMovie);
+    printMovie(parentHTML, movie);
   });
 }
 
-function printMovie(movie) {
+function printMovie(parentHTML, movie) {
   // declaracion elemento html
   let liMovie = document.createElement("li");
 
@@ -76,10 +74,11 @@ function printMovie(movie) {
 
   liMovie.appendChild(movieContainer);
 
-  return liMovie;
+  parentHTML.appendChild(liMovie);
 }
 
 function getMovies(movies) {
+  localStorage.setItem("movies", movies);
   console.log(movies);
   movies = JSON.parse(movies);
   console.table(movies["Search"]);
